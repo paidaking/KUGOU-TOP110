@@ -22,28 +22,24 @@ def get_page(num):
     return response.json()
 
 def parse_page(job_json):
-    job_list = job_json['content']['positionResult']['result']
-    company_info = []
-    for job in job_list:
-        job_info = []
-        job_info.append(job['companyFullName'])
-        job_info.append(job['companySize'])
-        job_info.append(job['financeStage'])
-        job_info.append(job['district'])
-        job_info.append(job['positionName'])
-        job_info.append(job['workYear'])
-        job_info.append(job['education'])
-        job_info.append(job['salary'])
-        job_info.append(job['positionAdvantage'])
-        company_info.append(job_info)
-    return company_info
+    results = job_json['content']['positionResult']['result']
+    for result in results:
+        infos = {
+            'companyFullName':result['companyFullName'],
+            'city':result['city'],
+            'companyLabelList':result['companyLabelList'],
+            'companySize':result['companySize'],
+            'createTime':result['createTime'],
+            'district':result['district'],
+            'education':result['education'],
+            'financeStage':result['financeStage'],
+            'firstType':result['firstType']
+        }
+        print(infos)
 
 if __name__ == '__main__':
-    all_company = []
     for page_num in range(1,2):
         job_json = get_page(page_num)
-        result = parse_page(job_json)
-        all_company += result
-        print(all_company)
-        print('已抓取{}页, 总职位数:{}'.format(page_num, len(all_company)))
+        parse_page(job_json)
+        #print('已抓取{}页, 总职位数:{}'.format(page_num, len(all_company)))
         time.sleep(10)
