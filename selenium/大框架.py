@@ -14,11 +14,11 @@ pw_botton.click()
 
 # 定位并输入用户名
 input1 = driver.find_element_by_name('username')
-input1.send_keys('18352386687')
+input1.send_keys('******')
 
 # 定位并输入密码
 input2 = driver.find_element_by_name('password')
-input2.send_keys('wj020700')
+input2.send_keys('******')
 
 # 定位并点击【下次自动登录】
 remember_botton = driver.find_element_by_id('account-form-remember')
