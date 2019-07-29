@@ -13,8 +13,8 @@ class Kunpeng:
         data = etree.HTML(html)
         title = data.xpath('//*[@id="epContentLeft"]/h1/text()')[0].strip()
         source_1 = data.xpath('//*[@id="ne_article_source"]/text()')[0]
-        source_2 = data.xpath('//*[@id="ne_article_source"]/previous_sibling::text()')[0]
-        source = source_1 + source_2
+        source_2 = data.xpath('//*[@id="ne_article_source"]/preceding-sibling::text()')[0].strip()[-3:]
+        source = source_2 + source_1
         text_1 = data.xpath('//*[@id="endText"]/p[5]/text()')[0].strip()
         text_2 = data.xpath('//*[@id="endText"]/p[6]/text()')[0].strip()
         print(title, '\n', source, '\n', text_1, '\n', text_2)
@@ -26,4 +26,3 @@ class Kunpeng:
 if __name__ == '__main__':
     kunpeng = Kunpeng()
     kunpeng.run()
-
