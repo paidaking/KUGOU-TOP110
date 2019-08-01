@@ -5,8 +5,7 @@ class Spider_CSS:
     def __init__(self):
         self.url = 'http://glidedsky.com/level/web/crawler-css-puzzle-1?page=1'
         self.headers = {'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36',
-                        'Cookie': '_ga=GA1.2.110110218.1563508515; remember_web_59ba36addc2b2f9401580f014c7f58ea4e30989d=eyJpdiI6InBJVmcraGtSYWR6emxHWU94YU13SFE9PSIsInZhbHVlIjoiYUdrcE9CNUdkbFY0UXRHSVpMbTI2RDBGSlB4bCtIVzhXWjlqMzV2ekNMMmRFRWtqaHJFQVlvSjRtaUJZRVFKYWRSSU03TjNcL1NcL2dvSVFHSFJrc2ZHQVVGNkIyM09aVkdNbU1cL21DVUY2d1RPNTBVUlwvQzM0RVliQlZUcHZtK1ZXMXI3aTFzM2hUdE4zbDBUSWhHV1NObG5cL0paUHdpbEJ0TEpvMHcwYzJNSHc9IiwibWFjIjoiNmM4MjhkZjBlYTFhNTg1OTljNWUwNzUwMTdlOWU4NjBjZmMyOTNjMTU1NDJhYmYzMDk1N2YwMTgzNGYwNmM3MSJ9; _gid=GA1.2.1033840215.1564552863; Hm_lvt_020fbaad6104bcddd1db12d6b78812f6=1563513314,1563515302,1564552862,1564635332; XSRF-TOKEN=eyJpdiI6Im14bHR1dFwvQ29lZ2ZqYnFPTjJvdGhBPT0iLCJ2YWx1ZSI6IlB3aCt1TFlsVmV0VThtelphdEJlRzB3djQxVXRDckJHMkVPcXpUS2NaMnM4NnJINkZlUFVwbFdTVDRkTTE1MloiLCJtYWMiOiJkYzY4MmRhZTk2YTJmYWY0NmYwOWZjMjBhNGZiYTIxZDI3MjhmN2ExZWZiMTMwZDNkNzMzMjM4YjZjZThhN2JhIn0%3D; glidedsky_session=eyJpdiI6InNEN0xTM1djOEF1UE1BZlhkNHBLTEE9PSIsInZhbHVlIjoiZnRrZExiSW0xdHBaNE9cL3dqa2RWbGduRjBHKzU2VjZTdlJqMnN2RkcxeVpQc3Q4Q092QThvZ2JCSjZITThxNUUiLCJtYWMiOiIxZGEwMTcxNWVkNThhNzllNjRiMmY1ZWU3ZmJhNTgzZjkzNWMzYjFkMThmOTcxOWQxN2U2MTkzYjcwZDlmM2EzIn0%3D; Hm_lpvt_020fbaad6104bcddd1db12d6b78812f6=1564637547'
-        }
+                        'Cookie': '******'}
 
     def get_urls(self):
         pass
