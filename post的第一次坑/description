@@ -10,3 +10,22 @@
 5.实现方式：不限（可用webdriver模拟点击下载或json转xls方向）
 6.语言要求： python
 
+登录时遇到的问题：
+1. 验证码识别：
+   方法：保存图片->灰度、二值化处理，注意得到的图片的是黑底白字，需要将图片转换成白底黑字，
+   具体做法：threshold = 222
+            table = []
+            for i in range(256):
+                if i < threshold:
+                    table.append(1)
+                else:
+                    table.append(0)
+    之后再用pytesseract识别得到验证码的值
+    有趣的是，爬友群的有个小伙伴提醒：验证码地址的response headers里面的set-cookie字段居然包含的验证码的值，所以这就很容易了。
+2. post里面的data：
+   方法：发送一次失败的请求，然后查看form data，构造data所需的参数，构造headers，然后就可以发送post请求。
+
+数据获取方面的问题：
+1. data是str不是dict，构造data参数
+2. cookie的获取
+    
