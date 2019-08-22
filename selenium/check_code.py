@@ -15,10 +15,12 @@ driver.save_screenshot('printscreen.png')
 imgelement = driver.find_element_by_id('txtcheckcode')  # 定位验证码
 location = imgelement.location  # 获取验证码x,y轴坐标
 print(location)
-size = imgelement.size  # 获取验证码的长宽
+size = imgelement.size  # 获取验证码的width,height的坐标
 print(size)
+
+# 写成我们需要截取的位置坐标（通过增减确定目标位置，每台电脑的分辨率不一样，请根据自己的电脑找合适的位置）
 rangle = (int(location['x']+310), int(location['y']+160), int(location['x'] + size['width']+218),
-          int(location['y'] + size['height']+175))  # 写成我们需要截取的位置坐标
+          int(location['y'] + size['height']+175))  
 
 i = Image.open("printscreen.png")  # 打开截图
 frame4 = i.crop(rangle)  # 使用Image的crop函数，从截图中再次截取我们需要的区域
