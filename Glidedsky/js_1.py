@@ -1,4 +1,4 @@
-# selenuim破解js爬虫，没有使用多线程那速度真的是慢的不得了，后续继续更新吧。
+# selenuim破解js反爬虫，没有使用多线程那速度真的是慢的不得了，后续继续更新吧。
 
 
 from selenium import webdriver
